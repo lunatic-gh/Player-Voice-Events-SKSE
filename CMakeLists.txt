@@ -4,6 +4,8 @@ project("PlayerVoiceEvents" VERSION 1.0 LANGUAGES CXX)
 
 set(OUTPUT_FOLDER "$ENV{SKYRIM_MODS_DIR_DEV}/${PROJECT_NAME}")
 
+set(CMAKE_BUILD_TYPE RelWithDebInfo)
+
 find_package(CommonLibSSE CONFIG REQUIRED)
 add_commonlibsse_plugin(${PROJECT_NAME} SOURCES plugin.cpp)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_23)
